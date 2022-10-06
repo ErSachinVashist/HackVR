@@ -1,7 +1,7 @@
 import React from "react";
 import { Environment, staticAssetURL, Text, View, VrButton } from "react-360";
 import GazeButton from "react-360-gaze-button";
-import { connect, doorOpened } from "../store";
+import { connect, doorOpened } from "../utils/store";
 import { styles } from "../styleSheet";
 
 class Enterance extends React.Component {
@@ -12,7 +12,7 @@ class Enterance extends React.Component {
   setGazed = () => {
     this.setState({ gazed: true });
     doorOpened();
-    Environment.setBackgroundImage(staticAssetURL("appleoffice.jpeg"));
+    Environment.setBackgroundImage(staticAssetURL("applestore.png"));
   };
   render() {
     if (this.props.isOpened) return null;
