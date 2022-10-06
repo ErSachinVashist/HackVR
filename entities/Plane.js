@@ -14,7 +14,7 @@ export default class Plane extends React.Component {
   render() {
     return (
       <View style={styles.mainView}>
-        <Text style={styles.text}>Should see black plane here</Text>
+        <Text style={styles.text}>Black Plane here</Text>
         <Entity
           source={{
             obj: asset("Plane.obj"),
