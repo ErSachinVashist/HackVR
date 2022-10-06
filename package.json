@@ -8,8 +8,6 @@
     "bundle": "node node_modules/react-360/scripts/bundle.js && sh scripts/copy-assets.sh",
     "open": "node -e \"require('xopen')('http://localhost:8081/index.html')\"",
     "devtools": "react-devtools",
-    "predeploy": "npm run bundle",
-    "deploy": "node scripts/deploy.js",
     "test": "jest"
   },
   "dependencies": {

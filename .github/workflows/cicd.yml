@@ -3,7 +3,7 @@ run-name: Deploy to ${{ inputs.deploy_target }} by @${{ github.actor }}
 
 on:
   pull_request:
-    branches: [main]
+    branches: [master]
     types:
       - closed
 
@@ -17,4 +17,12 @@ jobs:
         with:
           node-version: 12
           cache: npm
-      - run: npm run deploy
+      - name: Install Packages
+        run: npm install
+      - name: Building App
+        run: npm run bundle
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: build 
+        
