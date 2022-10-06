@@ -32,7 +32,6 @@ export const styles = StyleSheet.create({
     marginBottom: 10,
     alignItems: "center",
     justifyContent: "center",
-    
   },
   text: {
     fontSize: 30,
@@ -72,13 +71,13 @@ export const styles = StyleSheet.create({
     borderRadius: 100,
   },
   bannerView: {
-     width: 250,
+    width: 250,
     height: 150,
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: "rgba(255, 179, 179,0.1)",
     transform: [{ rotateY: "10deg" }],
-  }
+  },
 
   categoryHeading: {
     marginBottom: 20,

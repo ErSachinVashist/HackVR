@@ -21,7 +21,7 @@ function init(bundle, parent, options = {}) {
   );
   r360.renderToSurface(
     r360.createRoot("MainDoor"),
-    createSurface(400, 1.2, -0.09)
+    createSurface(400, 0, -0.09)
   );
   r360.renderToSurface(
     r360.createRoot("Mobiles"),
@@ -37,9 +37,6 @@ function init(bundle, parent, options = {}) {
     createSurface(800, 2.45, -0.9)
   );
 
-  // Load the initial environment
-  r360.compositor.setBackground(r360.getAssetURL("vodabg.png"));
-
   r360.renderToSurface(r360.createRoot("CategoryList"), createSurface(800));
   r360.renderToSurface(
     r360.createRoot("SubCategories"),
@@ -47,7 +44,9 @@ function init(bundle, parent, options = {}) {
   );
 
   // Load the initial environment
-  r360.compositor.setBackground(r360.getAssetURL("store_outside.jpg"));
+  r360.compositor.setBackground(r360.getAssetURL("vodabg.png"));
+
+
   // Load the initial environment
   // r360.compositor.setBackground(r360.getAssetURL('360_world.jpg'));
   r360.controls.clearRaycasters();

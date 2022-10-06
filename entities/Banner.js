@@ -1,7 +1,7 @@
 import React from "react";
 import { Environment, staticAssetURL, Text, View, Image , asset} from "react-360";
 //import GazeButton from "react-360-gaze-button";
-import { connect, doorOpened } from "../store";
+import { connect, doorOpened } from "../utils/store";
 import { styles } from "../styleSheet";
 
 class Banner extends React.Component {
