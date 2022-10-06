@@ -1,86 +1,30 @@
 import React from 'react';
-import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View,
-} from 'react-360';
+import { AppRegistry, Text, View } from "react-360";
 
-import GazeButton from "react-360-gaze-button";
+import { connect } from "./store";
+import { styles } from "./styleSheet";
+import MainDoor from "./entities/Enterance";
+import MobileDescription from "./entities/Mobiles";
+import CategoryMobiles from "./entities/CategoryMobile";
+import Plane from "./entities/Plane";
+import CategoryTab from "./entities/CategortTablet";
 
-export class SimpleButton extends React.Component {
-  state = {
-    gazed: false
-  };
-
-  setGazed = () => {
-    this.setState({ gazed: true });
-  };
-
+export class reactvr extends React.Component {
   render() {
-    const { gazed } = this.state;
+    if (this.props.isOpened) return null;
     return (
-      <View style={styles.panel}>
-        <GazeButton
-          duration={3000}
-          onClick={this.setGazed}
-          render={(remainingTime, isGazed) => (
-            <View style={styles.greetingBox}>
-              <Text style={styles.greeting}>
-                {gazed
-                  ? "You have Hovered over me"
-                  : isGazed
-                    ? remainingTime
-                    : "Hover over me"}
-              </Text>
-            </View>
-          )}
-        />
+      <View style={styles.mainView}>
+        <Text style={styles.greeting}>Scroll to Right {`=>`} </Text>
       </View>
     );
   }
 }
 
+const MainPage = connect(reactvr);
 
-export class reactvr extends React.Component {
-  render() {
-    return (
-      <View style={styles.panel}>
-        <SimpleButton />
-      </View>
-    );
-  }
-};
-
-export class reactvr2 extends React.Component {
-  render() {
-    return (
-      <View style={styles.panel}>
-        <SimpleButton />
-      </View>
-    );
-  }
-};
-
-const styles = StyleSheet.create({
-  panel: {
-    // Fill the entire surface
-    width: 400,
-    height: 400,
-    backgroundColor: 'rgba(255, 255, 255, 0.4)',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  greetingBox: {
-    padding: 20,
-    backgroundColor: '#000000',
-    borderColor: '#639dda',
-    borderWidth: 2,
-  },
-  greeting: {
-    fontSize: 30,
-  },
-});
-
-AppRegistry.registerComponent('reactvr', () => reactvr);
-AppRegistry.registerComponent('reactvr2', () => reactvr2);
+AppRegistry.registerComponent("reactvr", () => MainPage);
+AppRegistry.registerComponent("Mobiles", () => MobileDescription);
+AppRegistry.registerComponent("MainDoor", () => MainDoor);
+AppRegistry.registerComponent("CategoryMobiles", () => CategoryMobiles);
+AppRegistry.registerComponent("CategoryTab", () => CategoryTab);
+AppRegistry.registerComponent("Plane", () => Plane);
