@@ -1,7 +1,7 @@
 import propTypes from "prop-types";
 import React from "react";
 import { Image, StyleSheet, Text, View } from "react-360";
-import { connect } from "../store";
+import { connect } from "../utils/store";
 
 class Mobiles extends React.Component {
   render() {
