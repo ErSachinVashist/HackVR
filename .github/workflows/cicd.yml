@@ -21,5 +21,8 @@ jobs:
         run: npm install
       - name: Building App
         run: npm run bundle
-      - name: Deploying App
-        run: node scripts/deploy.js
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: build 
+
