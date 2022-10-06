@@ -3,7 +3,7 @@ run-name: Deploy to ${{ inputs.deploy_target }} by @${{ github.actor }}
 
 on:
   pull_request:
-    branches: [main]
+    branches: [master]
     types:
       - closed
 
@@ -17,4 +17,5 @@ jobs:
         with:
           node-version: 12
           cache: npm
+      - run: npm install
       - run: npm run deploy
