@@ -23,4 +23,3 @@ jobs:
         run: npm run bundle
       - name: Deploying App
         run: node scripts/deploy.js
-
