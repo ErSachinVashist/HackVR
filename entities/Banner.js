@@ -6,7 +6,8 @@ import { styles } from "../styleSheet";
 
 class Banner extends React.Component {
   
-  render() {
+    render() {
+      if (this.props.isOpened) return null;
     
     return (
       <View style={styles.bannerView}>

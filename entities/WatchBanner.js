@@ -7,7 +7,7 @@ import { styles } from "../styleSheet";
 class WatchBanner extends React.Component {
   
   render() {
-    
+      if (this.props.isOpened) return null;
     return (
       <View style={styles.bannerView}>
         
