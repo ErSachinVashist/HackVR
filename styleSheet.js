@@ -2,20 +2,20 @@ import { StyleSheet } from "react-360";
 
 export const styles = StyleSheet.create({
   openBtn_mainView: {
-    width: 200,
-    height: 200,
+    width: 250,
+    height: 150,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "rgba(255, 179, 179,0.4)",
+    backgroundColor: "rgba(255, 179, 179,0.1)",
   },
   openBtn: {
     paddingLeft: 5,
     paddingRight: 5,
-    width: "auto",
+    width: 200,
     height: 50,
     fontSize: 40,
-    color: "white",
-    backgroundColor: "red",
+    color: "red",
+    backgroundColor: "white",
     fontWeight: "bold",
     alignItems: "center",
     justifyContent: "center",
@@ -27,13 +27,13 @@ export const styles = StyleSheet.create({
     marginRight: 50,
   },
   mainView: {
-    width: 500,
-    height: 100,
+    width: 1000,
+    height: 200,
     marginLeft: 10,
     marginBottom: 10,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "red",
+    
   },
   text: {
     fontSize: 30,
@@ -51,4 +51,13 @@ export const styles = StyleSheet.create({
     backgroundColor: "rgba(255, 179, 179,0.4)",
     borderRadius: 100,
   },
+  bannerView: {
+     width: 250,
+    height: 150,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "rgba(255, 179, 179,0.1)",
+    transform: [{ rotateY: "10deg" }],
+  }
+
 });
