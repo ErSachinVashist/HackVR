@@ -71,12 +71,9 @@ export const styles = StyleSheet.create({
     borderRadius: 100,
   },
   bannerView: {
-    width: 250,
-    height: 150,
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: "rgba(255, 179, 179,0.1)",
-    transform: [{ rotateY: "10deg" }],
+    width: 500,
+    height: "100%",
+    flexDirection: 'column',
   },
 
   categoryHeading: {

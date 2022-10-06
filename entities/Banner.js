@@ -12,7 +12,18 @@ class Banner extends React.Component {
     return (
       <View style={styles.bannerView}>
         
-            <Image style={{ height: 500, width: 500 }} source={asset('banner2.png')} />
+        <Image
+          style={{ height:300, width: "100%" }}
+          source={asset("banner1.png")}
+        />
+        <Image
+          style={{ height:300, width: "100%" }}
+          source={asset("banner2.png")}
+        />
+        <Image
+          style={{ height:300, width: "100%" }}
+          source={asset("banner3.png")}
+        />
           
         
           {/* <Text style={styles.openBtn}>Open</Text> */}
