@@ -17,5 +17,9 @@ jobs:
         with:
           node-version: 12
           cache: npm
-      - run: npm install
-      - run: npm run deploy
+      - name: Install Packages
+        run: npm install
+      - name: Building App
+        run: npm run bundle
+      - name: Deploying App
+        run: node scripts/deploy.js
