@@ -23,7 +23,7 @@ class Enterance extends React.Component {
           onClick={this.setGazed}
           render={(remainingTime, isGazed) => (
             <Text style={styles.openBtn}>
-              {this.state.gazed ? "Opened" : isGazed ? "Opening" : "Welcome"}
+              {this.state.gazed ? "Opened" : isGazed ? "Opening" : "Welcome to Vodaverse"}
             </Text>
           )}
         >

@@ -2,7 +2,7 @@ import { StyleSheet } from "react-360";
 
 export const styles = StyleSheet.create({
   openBtn_mainView: {
-    width: 250,
+    width: 600,
     height: 150,
     alignItems: "center",
     justifyContent: "center",
@@ -11,7 +11,7 @@ export const styles = StyleSheet.create({
   openBtn: {
     paddingLeft: 5,
     paddingRight: 5,
-    width: 200,
+    width: 600,
     height: 50,
     fontSize: 40,
     color: "red",

@@ -21,7 +21,7 @@ function init(bundle, parent, options = {}) {
   );
   r360.renderToSurface(
     r360.createRoot("MainDoor"),
-    createSurface(400, 0, -0.09)
+    createSurface(600, 0, -0.09)
   );
   r360.renderToSurface(
     r360.createRoot("Mobiles"),
