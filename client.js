@@ -3,6 +3,7 @@
 
 import { ReactInstance } from "react-360-web";
 import SimpleRaycaster from "simple-raycaster";
+import CONSTANTS from "./utils/CONSTANTS";
 import { createSurface } from "./utils/surfaces";
 
 function init(bundle, parent, options = {}) {
@@ -23,32 +24,37 @@ function init(bundle, parent, options = {}) {
     r360.createRoot("MainDoor"),
     createSurface(600, 0, -0.09)
   );
-  r360.renderToSurface(
-    r360.createRoot("Mobiles"),
-    createSurface(600, Math.PI / 4)
-  );
 
   r360.renderToSurface(
     r360.createRoot("BannerSurface"),
-    createSurface(1000, (1.6 * Math.PI) / 2, -0.1)
+    createSurface(1100, (1.6 * Math.PI) / 2, -0.1)
   );
 
   r360.renderToSurface(
-    r360.createRoot("CategoryList"),
-    createSurface(800, (1.2 * Math.PI) / 2, -0.4)
+    r360.createRoot("CategoryMobiles"),
+    createSurface(1000, (1.2 * Math.PI) / 2, -0.4)
   );
   r360.renderToSurface(
-    r360.createRoot("SubCategories"),
-    createSurface(800, (-1.2 * Math.PI) / 2, -0.4)
+    r360.createRoot("CategoryTablets"),
+    createSurface(1000, (-1.2 * Math.PI) / 2, -0.4)
   );
   r360.renderToSurface(
     r360.createRoot("LogoBanner"),
-    createSurface(800, 0, 0.2)
+    createSurface(800, 0, 0.22)
+  );
+
+  r360.renderToSurface(
+    r360.createRoot("DeviceSection"),
+    createSurface(1200, 0.2, -0)
+  );
+
+  r360.renderToSurface(
+    r360.createRoot("ExitStore"),
+    createSurface(400, Math.PI)
   );
 
   // Load the initial environment
-  r360.compositor.setBackground(r360.getAssetURL("vodabg.png"));
-
+  r360.compositor.setBackground(r360.getAssetURL(CONSTANTS.IMAGES.ENTRANCE_BG));
 
   // Load the initial environment
   // r360.compositor.setBackground(r360.getAssetURL('360_world.jpg'));

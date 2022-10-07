@@ -3,6 +3,7 @@ import { Environment, staticAssetURL, Text, View, VrButton } from "react-360";
 import GazeButton from "react-360-gaze-button";
 import { connect, doorOpened } from "../utils/store";
 import { styles } from "../styleSheet";
+import CONSTANTS from "../utils/CONSTANTS";
 
 class Enterance extends React.Component {
   state = {
@@ -10,9 +11,9 @@ class Enterance extends React.Component {
   };
 
   setGazed = () => {
+    Environment.setBackgroundImage(staticAssetURL(CONSTANTS.IMAGES.STORE_BG));
     this.setState({ gazed: true });
     doorOpened();
-    Environment.setBackgroundImage(staticAssetURL("store2.png"));
   };
   render() {
     if (this.props.isOpened) return null;
@@ -23,12 +24,14 @@ class Enterance extends React.Component {
           onClick={this.setGazed}
           render={(remainingTime, isGazed) => (
             <Text style={styles.openBtn}>
-              {this.state.gazed ? "Opened" : isGazed ? "Opening" : "Welcome to Vodaverse"}
+              {this.state.gazed
+                ? "Opened"
+                : isGazed
+                ? "Opening..."
+                : "Welcome to Vodaverse".toUpperCase()}
             </Text>
           )}
-        >
-          {/* <Text style={styles.openBtn}>Open</Text> */}
-        </GazeButton>
+        ></GazeButton>
       </View>
     );
   }
