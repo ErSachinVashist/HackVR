@@ -21,7 +21,7 @@ class Banner extends React.Component {
           source={asset("banner2.png")}
         />
         <Image
-          style={{ height:"100%", width: "100%" }}
+          style={{ height:300, width: "100%" }}
           source={asset("banner3.png")}
             />
             
