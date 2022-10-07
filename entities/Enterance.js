@@ -12,7 +12,7 @@ class Enterance extends React.Component {
   setGazed = () => {
     this.setState({ gazed: true });
     doorOpened();
-    Environment.setBackgroundImage(staticAssetURL("applestore.png"));
+    Environment.setBackgroundImage(staticAssetURL("store2.png"));
   };
   render() {
     if (this.props.isOpened) return null;
