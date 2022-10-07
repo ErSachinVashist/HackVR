@@ -2,7 +2,7 @@ import { StyleSheet } from "react-360";
 
 export const styles = StyleSheet.create({
   openBtn_mainView: {
-    width: 250,
+    width: 600,
     height: 150,
     alignItems: "center",
     justifyContent: "center",
