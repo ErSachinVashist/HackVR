@@ -71,7 +71,7 @@ export const styles = StyleSheet.create({
     borderRadius: 100,
   },
   bannerView: {
-    width: 700,
+    width: 500,
     height: "100%",
     flexDirection: 'column',
     
