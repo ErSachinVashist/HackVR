@@ -6,14 +6,30 @@ export const styles = StyleSheet.create({
     height: 150,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "rgba(255, 179, 179,0.1)",
+    backgroundColor: "rgba(255, 255, 255,0.4)",
   },
   openBtn: {
     paddingLeft: 5,
     paddingRight: 5,
     width: 600,
     height: 50,
-    fontSize: 40,
+    fontSize: 50,
+    color: "red",
+    fontWeight: "bold",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  exitMainView: {
+    width: 100,
+    height: "auto",
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "rgba(255, 179, 179,0.1)",
+  },
+  exitBtn: {
+    width: 200,
+    height: 50,
+    fontSize: 30,
     color: "red",
     backgroundColor: "white",
     fontWeight: "bold",
@@ -21,9 +37,10 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
   },
   heading: {
-    fontSize: 40,
+    alignContent: "center",
+    fontSize: 50,
     color: "red",
-    fontWeight: "300",
+    fontWeight: "bold",
   },
   mainView: {
     width: 1000,
@@ -45,36 +62,30 @@ export const styles = StyleSheet.create({
     width: 800,
     height: 500,
     marginBottom: 10,
-    marginTop: 10,
-    alignItems: "center",
+    marginTop: 40,
+    alignItems: "flex-start",
     justifyContent: "center",
     backgroundColor: "rgba(255, 255, 255,0.4)",
   },
   categoryList: {
-    display: "flex",
+    width: "100%",
+    height: "100%",
     flexDirection: "row",
-    marginTop: 10,
-    justifyContent: "center",
-    alignItems: "center",
+    justifyContent: "space-between",
   },
   categoryItem: {
-    width: "auto",
-    height: "auto",
-    marginBottom: 5,
-    marginTop: 5,
-    marginRight: 5,
-    marginLeft: 5,
-    padding: 5,
+    width: 250,
+    height: "80%",
+    flexDirection: "row",
+    flexWrap: "wrap",
+    justifyContent: "space-between",
     alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: "rgba(0, 92, 230,0.5)",
-    borderRadius: 100,
+    backgroundColor: "white",
   },
   bannerView: {
-    width: 500,
+    width: 700,
     height: "100%",
-    flexDirection: 'column',
-    
+    flexDirection: "column",
   },
 
   categoryHeading: {
@@ -104,7 +115,117 @@ export const styles = StyleSheet.create({
   logoView: {
     width: 800,
     height: "100%",
-    flexDirection: 'column',
-    
+    flexDirection: "column",
+  },
+  deviceMainView: {
+    width: 1000,
+    height: 1000,
+    marginLeft: 10,
+    marginBottom: 10,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "rgba(255, 255, 255,0.7)",
+  },
+  buttonText: {
+    color: "black",
+    fontSize: 30,
+    alignItems: "center",
+    fontWeight: "500",
+    justifyContent: "center",
+    marginLeft: 40,
+  },
+  zoomOnHover: {
+    borderColor: "blue",
+    borderWidth: 10,
+    width: "100%",
+    height: "100%",
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },
+  categoryMobView: {
+    width: 810,
+
+    height: 500,
+
+    // marginBottom: 10,
+
+    // marginTop: 10,
+
+    //alignItems: "center",
+
+    display: "flex",
+
+    flexDirection: "row",
+
+    justifyContent: "space-evenly",
+
+    backgroundColor: "white",
+  },
+
+  buttonMob: {
+    //padding: 20,
+
+    backgroundColor: "red",
+
+    borderColor: "#639dda",
+
+    borderWidth: 2,
+
+    width: 200,
+
+    fontWeight: "700",
+
+    height: 50,
+
+    fontSize: 30,
+
+    textAlign: "center",
+
+    borderRadius: 30,
+  },
+  priceDesign: {
+    marginTop: 50,
+
+    fontWeight: "700",
+
+    color: "black",
+
+    fontSize: 30,
+  },
+
+  subView: {
+    width: 400,
+    display: "flex",
+    flexWrap: "wrap",
+    flexDirection: "column",
+    margin: 15,
+    justifyContent: "space-around",
+  },
+  imageStyle: {
+    height: 500,
+
+    width: 400,
+
+    alignSelf: "flex-start",
+
+    alignItems: "flex-start",
+
+    //justifyContent: "center",
+  },
+
+  desText: {
+    fontSize: 20,
+
+    color: "black",
+
+    fontWeight: "400",
+  },
+
+  exText: {
+    fontSize: 15,
+
+    color: "black",
+
+    fontWeight: "400",
   },
 });

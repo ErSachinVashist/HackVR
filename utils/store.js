@@ -1,11 +1,12 @@
 import React from "react";
 
-const State = {
-  phoneBrand: "",
+const defaultState = {
   isOpened: false,
   gazedProduct: "",
   showList: false,
+  selectedDevice: "",
 };
+let State = { ...defaultState };
 
 const callbacks = [];
 
@@ -13,13 +14,14 @@ function updateComponent() {
   callbacks.forEach((cb) => cb());
 }
 
-export function setBrand(brand) {
-  State.phoneBrand = brand;
-  updateComponent();
-}
 export function doorOpened() {
   State.isOpened = true;
   State.showList = true;
+  updateComponent();
+}
+
+export function exitStore() {
+  State = { ...defaultState };
   updateComponent();
 }
 
@@ -34,6 +36,11 @@ export function showProductList() {
   updateComponent();
 }
 
+export function onDeviceSelected(device) {
+  State.selectedDevice = device;
+  updateComponent();
+}
+
 export function connect(Component) {
   return class Wrapper extends React.Component {
     state = {
@@ -41,15 +48,16 @@ export function connect(Component) {
       isOpened: State.isOpened,
       gazedProduct: State.gazedProduct,
       showList: State.showList,
+      selectedDevice: State.selectedDevice,
     };
     componentDidMount() {
-      console.log("showList", State.showList);
+      console.log("ComponentDidmount");
       callbacks.push(() =>
         this.setState({
-          phoneBrand: State.phoneBrand,
           isOpened: State.isOpened,
           gazedProduct: State.gazedProduct,
           showList: State.showList,
+          selectedDevice: State.selectedDevice,
         })
       );
     }

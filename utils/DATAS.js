@@ -1,10 +1,258 @@
 import CONSTANTS from "./CONSTANTS";
 
-const { PHONES, TABS, SIMO } = CONSTANTS;
+const { PHONES, TABS, SIMO, BRANDS } = CONSTANTS;
 export const PRODUCT_LIST = [PHONES, TABS, SIMO];
 
-export const PHONE_LIST = ["Apple", "Samsung", "Honor"];
+export const PHONE_BRAND_LIST = [
+  {
+    id: 1,
+    title: BRANDS.APPLE,
+    img: "applePhone.png",
+  },
+  {
+    id: 2,
+    title: BRANDS.SAMSUNG,
+    img: "honorPhone.png",
+  },
+  {
+    id: 3,
+    title: BRANDS.HONOR,
+    img: "samsungPhone.png",
+  },
+];
 
-export const TAB_LIST = ["Apple", "Samsung", "Honor"];
+export const TAB_BRAND_LIST = [
+  {
+    id: 1,
+    title: BRANDS.APPLE,
+    img: "ipad.jpeg",
+  },
+  {
+    id: 2,
+    title: BRANDS.SAMSUNG,
+    img: "samsungTablet.jpeg",
+  },
+  {
+    id: 3,
+    title: BRANDS.LENOVO,
+    img: "lenovoTab.jpeg",
+  },
+];
 
 export const SIMO_LIST = ["Pay Monthly", "Pay as you Go", "Topup"];
+
+export const PHONE_LIST = {
+  [BRANDS.APPLE]: [
+    {
+      id: 1,
+      title: "Apple iPhone12",
+      img: "iPhone12.jpeg",
+      erText: "Samsung a superb android flagship",
+      erText1: "phone with 5g compatible",
+      specs: "RAM | ROM : 8 GB RAM | 128 GB ROM",
+      proc: "Qualcomm snapdragon 8 Gen 1",
+      disp: "6.6 AMOLED 2x Display",
+      price: "Price: £799",
+    },
+    {
+      id: 2,
+      title: "Apple iPhone12 Pro",
+      img: "iPhone12Pro.jpeg",
+      erText: "Samsung a superb android flagship",
+      erText1: "phone with 5g compatible",
+      specs: "RAM | ROM : 8 GB RAM | 128 GB ROM",
+      proc: "Qualcomm snapdragon 8 Gen 1",
+      disp: "6.6 AMOLED 2x Display",
+      price: "Price: £799",
+    },
+    {
+      id: 3,
+      title: "Apple iPhone13",
+      img: "iPhone13.jpeg",
+      erText: "Samsung a superb android flagship",
+      erText1: "phone with 5g compatible",
+      specs: "RAM | ROM : 8 GB RAM | 128 GB ROM",
+      proc: "Qualcomm snapdragon 8 Gen 1",
+      disp: "6.6 AMOLED 2x Display",
+      price: "Price: £799",
+    },
+  ],
+  [BRANDS.SAMSUNG]: [
+    {
+      id: 1,
+      title: "Samsung Galaxy S22",
+      img: "galaxyS22.jpeg",
+      erText: "Samsung a superb android flagship",
+      erText1: "phone with 5g compatible",
+      specs: "RAM | ROM : 8 GB RAM | 128 GB ROM",
+      proc: "Qualcomm snapdragon 8 Gen 1",
+      disp: "6.6 AMOLED 2x Display",
+      price: "Price: £799",
+    },
+    {
+      id: 2,
+      title: "Samsung Galaxy S22+",
+      img: "galaxyS22P.jpeg",
+      erText: "Samsung a superb android flagship",
+      erText1: "phone with 5g compatible",
+      specs: "RAM | ROM : 8 GB RAM | 128 GB ROM",
+      proc: "Qualcomm snapdragon 8 Gen 1",
+      disp: "6.6 AMOLED 2x Display",
+      price: "Price: £799",
+    },
+    {
+      id: 3,
+      title: "Samsung Galaxy S22 Ultra",
+      img: "ultra.jpeg",
+      erText: "Samsung a superb android flagship",
+      erText1: "phone with 5g compatible",
+      specs: "RAM | ROM : 8 GB RAM | 128 GB ROM",
+      proc: "Qualcomm snapdragon 8 Gen 1",
+      disp: "6.6 AMOLED 2x Display",
+      price: "Price: £799",
+    },
+  ],
+  [BRANDS.HONOR]: [
+    {
+      id: 1,
+      title: "Honor 70",
+      img: "honor70.jpeg",
+      erText: "Samsung a superb android flagship",
+      erText1: "phone with 5g compatible",
+      specs: "RAM | ROM : 8 GB RAM | 128 GB ROM",
+      proc: "Qualcomm snapdragon 8 Gen 1",
+      disp: "6.6 AMOLED 2x Display",
+      price: "Price: £799",
+    },
+    {
+      id: 2,
+      title: "Honor Magic4 Pro",
+      img: "magic4.jpeg",
+      erText: "Samsung a superb android flagship",
+      erText1: "phone with 5g compatible",
+      specs: "RAM | ROM : 8 GB RAM | 128 GB ROM",
+      proc: "Qualcomm snapdragon 8 Gen 1",
+      disp: "6.6 AMOLED 2x Display",
+      price: "Price: £799",
+    },
+    {
+      id: 3,
+      title: "Honor Magic4 Lite 5G",
+      img: "magic4Lite.jpeg",
+      erText: "Samsung a superb android flagship",
+      erText1: "phone with 5g compatible",
+      specs: "RAM | ROM : 8 GB RAM | 128 GB ROM",
+      proc: "Qualcomm snapdragon 8 Gen 1",
+      disp: "6.6 AMOLED 2x Display",
+      price: "Price: £799",
+    },
+  ],
+};
+
+export const TAB_LIST = {
+  [BRANDS.APPLE]: [
+    {
+      id: 1,
+      title: "Apple iPad 10.2",
+      img: "iPad10.jpeg",
+      erText: "Samsung a superb android flagship",
+      erText1: "phone with 5g compatible",
+      specs: "RAM | ROM : 8 GB RAM | 128 GB ROM",
+      proc: "Qualcomm snapdragon 8 Gen 1",
+      disp: "6.6 AMOLED 2x Display",
+      price: "Price: £799",
+    },
+    {
+      id: 2,
+      title: "Apple iPad Pro 11",
+      img: "iPad11.jpeg",
+      erText: "Samsung a superb android flagship",
+      erText1: "phone with 5g compatible",
+      specs: "RAM | ROM : 8 GB RAM | 128 GB ROM",
+      proc: "Qualcomm snapdragon 8 Gen 1",
+      disp: "6.6 AMOLED 2x Display",
+      price: "Price: £799",
+    },
+    {
+      id: 3,
+      title: "Apple iPad Pro 12.9",
+      img: "iPad12.jpeg",
+      erText: "Samsung a superb android flagship",
+      erText1: "phone with 5g compatible",
+      specs: "RAM | ROM : 8 GB RAM | 128 GB ROM",
+      proc: "Qualcomm snapdragon 8 Gen 1",
+      disp: "6.6 AMOLED 2x Display",
+      price: "Price: £799",
+    },
+  ],
+  [BRANDS.SAMSUNG]: [
+    {
+      id: 1,
+      title: "Samsung Galaxy Tab A7 Lite",
+      img: "a7lite.jpeg",
+      erText: "Samsung a superb android flagship",
+      erText1: "phone with 5g compatible",
+      specs: "RAM | ROM : 8 GB RAM | 128 GB ROM",
+      proc: "Qualcomm snapdragon 8 Gen 1",
+      disp: "6.6 AMOLED 2x Display",
+      price: "Price: £799",
+    },
+    {
+      id: 2,
+      title: "Samsung Galaxy Tab S6 Lite",
+      img: "s6lite.jpeg",
+      erText: "Samsung a superb android flagship",
+      erText1: "phone with 5g compatible",
+      specs: "RAM | ROM : 8 GB RAM | 128 GB ROM",
+      proc: "Qualcomm snapdragon 8 Gen 1",
+      disp: "6.6 AMOLED 2x Display",
+      price: "Price: £799",
+    },
+    {
+      id: 3,
+      title: "Samsung Galaxy Tab S8 Ultra",
+      img: "s8ultra.jpeg",
+      erText: "Samsung a superb android flagship",
+      erText1: "phone with 5g compatible",
+      specs: "RAM | ROM : 8 GB RAM | 128 GB ROM",
+      proc: "Qualcomm snapdragon 8 Gen 1",
+      disp: "6.6 AMOLED 2x Display",
+      price: "Price: £799",
+    },
+  ],
+  [BRANDS.LENOVO]: [
+    {
+      id: 1,
+      title: "Tab K10",
+      img: "k10.webp",
+      erText: "Samsung a superb android flagship",
+      erText1: "phone with 5g compatible",
+      specs: "RAM | ROM : 8 GB RAM | 128 GB ROM",
+      proc: "Qualcomm snapdragon 8 Gen 1",
+      disp: "6.6 AMOLED 2x Display",
+      price: "Price: £799",
+    },
+    {
+      id: 2,
+      title: "Tab M10",
+      img: "m10.webp",
+      erText: "Samsung a superb android flagship",
+      erText1: "phone with 5g compatible",
+      specs: "RAM | ROM : 8 GB RAM | 128 GB ROM",
+      proc: "Qualcomm snapdragon 8 Gen 1",
+      disp: "6.6 AMOLED 2x Display",
+      price: "Price: £799",
+    },
+    {
+      id: 3,
+      title: "Tab M10 Plus",
+      img: "m10plus.webp",
+      erText: "Samsung a superb android flagship",
+      erText1: "phone with 5g compatible",
+      specs: "RAM | ROM : 8 GB RAM | 128 GB ROM",
+      proc: "Qualcomm snapdragon 8 Gen 1",
+      disp: "6.6 AMOLED 2x Display",
+      price: "Price: £799",
+    },
+  ],
+};

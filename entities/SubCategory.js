@@ -1,42 +1,50 @@
 import React from "react";
-import { Text, View } from "react-360";
+import { asset, Image, Text, View } from "react-360";
 import { connect, showProductList } from "../utils/store";
 import { styles } from "../styleSheet";
 import GazeButton from "react-360-gaze-button";
 import CONSTANTS from "../utils/CONSTANTS";
-import { PHONE_LIST, SIMO_LIST, TAB_LIST } from "../utils/DATAS";
+import {
+  PHONE_BRAND_LIST,
+  PHONE_LIST,
+  SIMO_LIST,
+  TAB_BRAND_LIST,
+  TAB_LIST,
+} from "../utils/DATAS";
 
-class SubCategory extends React.Component {
-  handleOnClick = () => {
-    console.log("gazed");
-  };
-  get getSubCategoryList() {
-    const { PHONES, TABS, SIMO } = CONSTANTS;
-    switch (this.props.gazedProduct) {
-      case PHONES:
-        return PHONE_LIST;
-      case TABS:
-        return TAB_LIST;
-      case SIMO:
-        return SIMO_LIST;
-    }
-  }
+const { PHONES, TABS, SIMO, PRODUCT_HEADINGS, GAZING_DELAY } = CONSTANTS;
+let hovered = false;
+export default class SubCategory extends React.Component {
   render() {
-    if (!this.props.gazedProduct) return null;
     return (
-      <View style={styles.categoryTabView} onEnter={showProductList}>
+      <View style={styles.categoryMainView} onExit={this.props.onExit}>
         <View style={styles.categoryHeading}>
-          <Text style={styles.heading}>{this.props.gazedProduct}</Text>
+          <Text style={styles.heading}>{this.props.heading}</Text>
         </View>
         <View style={styles.categoryList}>
-          {this.getSubCategoryList.map((subCat, index) => (
-            <View style={styles.categoryItem} key={index}>
+          {this.props.itemList.map((item, index) => (
+            <View
+              style={hovered ? styles.zoomOnHover : styles.categoryItem}
+              key={item.id || index}
+            >
               <GazeButton
-                duration={200}
-                onClick={this.handleOnClick}
-                render={(remainingTime, isGazed) => (
-                  <Text style={styles.text}>{subCat}</Text>
-                )}
+                duration={GAZING_DELAY}
+                onClick={this.props.handleOnClick(item)}
+                render={(remainingTime, isGazed) => {
+                  if (isGazed) hovered = true;
+                  else hovered = false;
+                  return (
+                    <View>
+                      {item.img && (
+                        <Image
+                          style={{ height: 300, width: this.props.imageWidth }}
+                          source={asset(item.img)}
+                        />
+                      )}
+                      <Text style={styles.buttonText}>{item.title}</Text>
+                    </View>
+                  );
+                }}
               />
             </View>
           ))}
@@ -46,6 +54,3 @@ class SubCategory extends React.Component {
   }
 }
 
-const SubCategories = connect(SubCategory);
-
-export default SubCategories;
