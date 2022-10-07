@@ -30,7 +30,7 @@ function init(bundle, parent, options = {}) {
 
   r360.renderToSurface(
     r360.createRoot("BannerSurface"),
-    createSurface(900, 2.39, -0.09)
+    createSurface(1100, (1.6 * Math.PI) / 2, -0.1)
   );
 
   r360.renderToSurface(r360.createRoot("CategoryList"), createSurface(800));

@@ -71,9 +71,10 @@ export const styles = StyleSheet.create({
     borderRadius: 100,
   },
   bannerView: {
-    width: 500,
+    width: 700,
     height: "100%",
     flexDirection: 'column',
+    
   },
 
   categoryHeading: {
