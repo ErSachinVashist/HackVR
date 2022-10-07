@@ -33,10 +33,13 @@ function init(bundle, parent, options = {}) {
     createSurface(1100, (1.6 * Math.PI) / 2, -0.1)
   );
 
-  r360.renderToSurface(r360.createRoot("CategoryList"), createSurface(800));
+  r360.renderToSurface(
+    r360.createRoot("CategoryList"),
+    createSurface(800, (1.2 * Math.PI) / 2, -0.4)
+  );
   r360.renderToSurface(
     r360.createRoot("SubCategories"),
-    createSurface(600, (-0.8 * Math.PI) / 2)
+    createSurface(800, (-1.2 * Math.PI) / 2, -0.4)
   );
 
   // Load the initial environment
