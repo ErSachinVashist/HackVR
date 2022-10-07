@@ -41,6 +41,10 @@ function init(bundle, parent, options = {}) {
     r360.createRoot("SubCategories"),
     createSurface(800, (-1.2 * Math.PI) / 2, -0.4)
   );
+  r360.renderToSurface(
+    r360.createRoot("LogoBanner"),
+    createSurface(800, 0, 0.2)
+  );
 
   // Load the initial environment
   r360.compositor.setBackground(r360.getAssetURL("vodabg.png"));

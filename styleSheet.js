@@ -101,4 +101,10 @@ export const styles = StyleSheet.create({
     backgroundColor: "rgba(255, 255, 255,0.4)",
     marginRight: 300,
   },
+  logoView: {
+    width: 800,
+    height: "100%",
+    flexDirection: 'column',
+    
+  },
 });

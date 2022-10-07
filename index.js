@@ -11,6 +11,7 @@ import BannerSurface from "./entities/Banner";
 import SubCategories from "./entities/SubCategory";
 import CategoryList from "./entities/CategoryList";
 import CategorySimo from "./entities/CategorySimo";
+import LogoBanner from "./entities/Logo";
 
 export class reactvr extends React.Component {
   render() {
@@ -33,3 +34,5 @@ AppRegistry.registerComponent("Plane", () => Plane);
 AppRegistry.registerComponent("BannerSurface", () => BannerSurface);
 AppRegistry.registerComponent("CategoryList", () => CategoryList);
 AppRegistry.registerComponent("CategorySimOnly", () => CategorySimo);
+AppRegistry.registerComponent("LogoBanner", () => LogoBanner);
+
