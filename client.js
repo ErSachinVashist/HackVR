@@ -22,7 +22,7 @@ function init(bundle, parent, options = {}) {
   );
   r360.renderToSurface(
     r360.createRoot("MainDoor"),
-    createSurface(600, 0, -0.09)
+    createSurface(1000, 0, -0.3)
   );
 
   r360.renderToSurface(
@@ -32,11 +32,11 @@ function init(bundle, parent, options = {}) {
 
   r360.renderToSurface(
     r360.createRoot("CategoryMobiles"),
-    createSurface(1000, (1.2 * Math.PI) / 2, -0.4)
+    createSurface(1000, (0.8 * Math.PI) / 2, -0.4)
   );
   r360.renderToSurface(
     r360.createRoot("CategoryTablets"),
-    createSurface(1000, (-1.2 * Math.PI) / 2, -0.4)
+    createSurface(1000, (-0.8 * Math.PI) / 2, -0.4)
   );
   r360.renderToSurface(
     r360.createRoot("LogoBanner"),

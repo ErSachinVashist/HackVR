@@ -21,7 +21,7 @@ class Exit extends React.Component {
           onClick={this.setGazed}
           render={(remainingTime, isGazed) => (
             <Text style={styles.exitBtn}>
-              {isGazed ? "Thanks for your Vist" : "Exit Store"}
+              {isGazed ? "Thanks for your Visit" : "Exit Store"}
             </Text>
           )}
         ></GazeButton>

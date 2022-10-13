@@ -5,6 +5,7 @@ const defaultState = {
   gazedProduct: "",
   showList: false,
   selectedDevice: "",
+  buyed: false,
 };
 let State = { ...defaultState };
 
@@ -38,6 +39,12 @@ export function showProductList() {
 
 export function onDeviceSelected(device) {
   State.selectedDevice = device;
+  State.buyed = false;
+  updateComponent();
+}
+
+export function onDeviceBuyed() {
+  State.buyed = true;
   updateComponent();
 }
 
@@ -49,15 +56,16 @@ export function connect(Component) {
       gazedProduct: State.gazedProduct,
       showList: State.showList,
       selectedDevice: State.selectedDevice,
+      buyed: State.buyed,
     };
     componentDidMount() {
-      console.log("ComponentDidmount");
       callbacks.push(() =>
         this.setState({
           isOpened: State.isOpened,
           gazedProduct: State.gazedProduct,
           showList: State.showList,
           selectedDevice: State.selectedDevice,
+          buyed: State.buyed,
         })
       );
     }
