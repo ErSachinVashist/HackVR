@@ -11,7 +11,7 @@ export const styles = StyleSheet.create({
   openBtn: {
     paddingLeft: 5,
     paddingRight: 5,
-    width: 600,
+    width: "auto",
     height: 50,
     fontSize: 50,
     color: "red",
@@ -227,5 +227,15 @@ export const styles = StyleSheet.create({
     color: "black",
 
     fontWeight: "400",
+  },
+  thankText: {
+    width: "auto",
+    fontSize: 20,
+    color: "red",
+    fontWeight: "bold",
+  },
+  buyView: {
+    width: "auto",
+    height: 50,
   },
 });

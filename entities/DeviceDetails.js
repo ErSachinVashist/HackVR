@@ -2,16 +2,11 @@ import React from "react";
 import { asset, Image, View, Text } from "react-360";
 import GazeButton from "react-360-gaze-button";
 import { styles } from "../styleSheet";
-import CONSTANTS from "../utils/CONSTANTS";
-import { connect } from "../utils/store";
+import { connect, onDeviceBuyed } from "../utils/store";
 
 class DeviceDetails extends React.Component {
-  state = {
-    buyed: false,
-  };
   handleOnClick = () => {
-    console.log("Buy now clicked");
-    this.setState({ buyed: true });
+    onDeviceBuyed();
   };
 
   render() {
@@ -30,14 +25,9 @@ class DeviceDetails extends React.Component {
             <Text style={styles.desText}>{selectedDevice.disp}</Text>
             <Text style={styles.priceDesign}>{selectedDevice.price} </Text>
           </View>
-          <View
-            style={{
-              width: "auto",
-              height: 50,
-            }}
-          >
-            {this.state.buyed ? (
-              <Text style={{ fontSize: 20, color: "red", fontWeight: "bold" }}>
+          <View style={styles.buyView}>
+            {this.props.buyed ? (
+              <Text style={styles.thankText}>
                 Thanks for your Purchase. Visit us Again!
               </Text>
             ) : (
@@ -45,7 +35,6 @@ class DeviceDetails extends React.Component {
                 duration={1000}
                 onClick={this.handleOnClick}
                 render={(remainingTime, isGazed) => {
-                  console.log(isGazed);
                   return <Text style={styles.buttonMob}>Buy Now</Text>;
                 }}
               />

@@ -4,15 +4,8 @@ import { connect, showProductList } from "../utils/store";
 import { styles } from "../styleSheet";
 import GazeButton from "react-360-gaze-button";
 import CONSTANTS from "../utils/CONSTANTS";
-import {
-  PHONE_BRAND_LIST,
-  PHONE_LIST,
-  SIMO_LIST,
-  TAB_BRAND_LIST,
-  TAB_LIST,
-} from "../utils/DATAS";
 
-const { PHONES, TABS, SIMO, PRODUCT_HEADINGS, GAZING_DELAY } = CONSTANTS;
+const { GAZING_DELAY } = CONSTANTS;
 let hovered = false;
 export default class SubCategory extends React.Component {
   render() {
