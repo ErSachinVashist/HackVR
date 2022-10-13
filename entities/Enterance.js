@@ -18,14 +18,14 @@ class Enterance extends React.Component {
   render() {
     if (this.props.isOpened) return null;
     return (
-      <View style={styles.openBtn_mainView}>
+      <View style={styles.openBtn_mainView} hitSlop={50}>
         <GazeButton
           duration={1000}
           onClick={this.setGazed}
           render={(remainingTime, isGazed) => (
             <Text style={styles.openBtn}>
               {this.state.gazed
-                ? "Opened"
+                ? "Welcome Again to Vodaverse".toUpperCase()
                 : isGazed
                 ? "Opening..."
                 : "Welcome to Vodaverse".toUpperCase()}

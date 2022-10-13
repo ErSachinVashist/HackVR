@@ -10,6 +10,7 @@ class DeviceDetails extends React.Component {
     buyed: false,
   };
   handleOnClick = () => {
+    console.log("Buy now clicked");
     this.setState({ buyed: true });
   };
 
@@ -29,16 +30,22 @@ class DeviceDetails extends React.Component {
             <Text style={styles.desText}>{selectedDevice.disp}</Text>
             <Text style={styles.priceDesign}>{selectedDevice.price} </Text>
           </View>
-          <View>
+          <View
+            style={{
+              width: "auto",
+              height: 50,
+            }}
+          >
             {this.state.buyed ? (
               <Text style={{ fontSize: 20, color: "red", fontWeight: "bold" }}>
-                Thanks for your Purchase. Vist us Again!
+                Thanks for your Purchase. Visit us Again!
               </Text>
             ) : (
               <GazeButton
-                duration={1500}
+                duration={1000}
                 onClick={this.handleOnClick}
                 render={(remainingTime, isGazed) => {
+                  console.log(isGazed);
                   return <Text style={styles.buttonMob}>Buy Now</Text>;
                 }}
               />

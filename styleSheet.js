@@ -2,7 +2,7 @@ import { StyleSheet } from "react-360";
 
 export const styles = StyleSheet.create({
   openBtn_mainView: {
-    width: 600,
+    width: 1000,
     height: 150,
     alignItems: "center",
     justifyContent: "center",
@@ -20,14 +20,14 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
   },
   exitMainView: {
-    width: 100,
+    width: 500,
     height: "auto",
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: "rgba(255, 179, 179,0.1)",
   },
   exitBtn: {
-    width: 200,
+    width: 500,
     height: 50,
     fontSize: 30,
     color: "red",
@@ -35,10 +35,11 @@ export const styles = StyleSheet.create({
     fontWeight: "bold",
     alignItems: "center",
     justifyContent: "center",
+    alignContent: "center",
   },
   heading: {
     alignContent: "center",
-    fontSize: 50,
+    fontSize: 40,
     color: "red",
     fontWeight: "bold",
   },
@@ -168,10 +169,9 @@ export const styles = StyleSheet.create({
     backgroundColor: "red",
 
     borderColor: "#639dda",
-
     borderWidth: 2,
 
-    width: 200,
+    width: "auto",
 
     fontWeight: "700",
 
