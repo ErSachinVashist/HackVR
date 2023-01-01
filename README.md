@@ -1,2 +1,1 @@
-# HackVR
-Vodafone UK hackathon
+Webpolyfill

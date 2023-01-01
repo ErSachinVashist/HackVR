@@ -1,20 +1,58 @@
 import React from "react";
-import { asset, Image, View, Text } from "react-360";
+import {
+  asset,
+  Image,
+  View,
+  Text,
+  Environment,
+  staticAssetURL,
+} from "react-360";
 import GazeButton from "react-360-gaze-button";
 import { styles } from "../styleSheet";
-import { connect, onDeviceBuyed } from "../utils/store";
+import {
+  connect,
+  onDeviceBuyed,
+  addToCart,
+  isItemsInCart,
+  shouldShowDeviceDetails,
+  showCart,
+  isAddedToCart,
+} from "../utils/store";
 
 class DeviceDetails extends React.Component {
-  handleOnClick = () => {
-    onDeviceBuyed();
+  constructor() {
+    super();
+    this.state = {
+      buyed: false,
+    };
+  }
+  handleAddToCart = () => {
+    addToCart(this.props.selectedDevice);
+  };
+
+  componentDidUpdate(prevProps) {
+    if(prevProps.selectedDevice.id !== this.props.selectedDevice.id) {
+      this.setState({buyed: false})
+    }
+  }
+
+  handleBuy= ()=>{
+    console.log('buy')
+    this.setState({ buyed: true });
+  }
+
+  handleGoToCart = () => {
+    showCart();
+    Environment.setBackgroundImage(
+      staticAssetURL(CONSTANTS.IMAGES.CHECKOUT_BG)
+    );
   };
 
   render() {
-    if (!this.props.selectedDevice) return null;
+    if (!shouldShowDeviceDetails()) return null;
     const { selectedDevice } = this.props;
     return (
       <View style={styles.categoryMobView}>
-        <Image style={styles.imageStyle} source={asset(selectedDevice.img)} />
         <View style={styles.subView}>
           <View>
             <Text style={styles.heading}>{selectedDevice.title}</Text>
@@ -26,16 +64,50 @@ class DeviceDetails extends React.Component {
             <Text style={styles.priceDesign}>{selectedDevice.price} </Text>
           </View>
           <View style={styles.buyView}>
-            {this.props.buyed ? (
+            {this.state.buyed ? (
               <Text style={styles.thankText}>
                 Thanks for your Purchase. Visit us Again!
               </Text>
             ) : (
+              <View style={styles.buy_cart_btn_view}>
+                <GazeButton
+                  disabled={isAddedToCart(selectedDevice.id)}
+                  style={{ width: "auto", marginHorizontal: 10 }}
+                  duration={1000}
+                  onClick={this.handleAddToCart}
+                  render={(remainingTime, isGazed) => {
+                    return (
+                      <Text
+                        style={
+                          isAddedToCart(selectedDevice.id)
+                            ? styles.buttonMobDisabled
+                            : styles.buttonMob
+                        }
+                      >
+                        {isAddedToCart(selectedDevice.id)
+                          ? "Added to Cart"
+                          : "Add to Cart"}
+                      </Text>
+                    );
+                  }}
+                />
+                <GazeButton
+                  style={{ width: "auto", marginHorizontal: 10 }}
+                  duration={1000}
+                  onClick={this.handleBuy}
+                  render={(remainingTime, isGazed) => {
+                    return <Text style={styles.buyBtn}>Buy Now </Text>;
+                  }}
+                />
+              </View>
+            )}
+            {isItemsInCart() && (
               <GazeButton
+                style={{ width: "50" }}
                 duration={1000}
-                onClick={this.handleOnClick}
+                onClick={this.handleGoToCart}
                 render={(remainingTime, isGazed) => {
-                  return <Text style={styles.buttonMob}>Buy Now</Text>;
+                  return <Text style={styles.goToCartLink}>GO TO CART</Text>;
                 }}
               />
             )}

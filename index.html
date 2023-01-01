@@ -17,8 +17,19 @@
   <script src="./client.bundle?platform=vr"></script>
   <script>
     // Initialize polyfill for browsers to support VR motion
-    var polyfill = new WebVRPolyfill();
-
+    /* eslint-disable */
+    const polyfill = new WebVRPolyfill({
+      // Ensures the polyfill is always active on mobile, due to providing
+      // a polyfilled CardboardVRDisplay when no native API is available,
+      // and also polyfilling even when the native API is available, due to
+      // providing a CardboardVRDisplay when no native VRDisplays exist.
+      PROVIDE_MOBILE_VRDISPLAY: true,
+      // Polyfill optimizations
+      DIRTY_SUBMIT_FRAME_BINDINGS: false,
+      BUFFER_SCALE: 0.75,
+    });
+    /* eslint-enable */
+    
     // Initialize the React 360 application
     React360.init(
       'index.bundle?platform=vr&dev=true',

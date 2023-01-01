@@ -1,7 +1,11 @@
 import React from "react";
 import { Text, View } from "react-360";
 import GazeButton from "react-360-gaze-button";
-import { connect, onDeviceSelected } from "../utils/store";
+import {
+  connect,
+  onDeviceSelected,
+  shouldShowDeviceList,
+} from "../utils/store";
 import { styles } from "../styleSheet";
 import SubCategory from "./SubCategory";
 import { PHONE_BRAND_LIST, PHONE_LIST } from "../utils/DATAS";
@@ -34,7 +38,7 @@ class CategoryMobile extends React.Component {
   };
 
   render() {
-    if (!this.props.isOpened) return null;
+    if (!shouldShowDeviceList()) return null;
     if (Object.keys(PHONE_LIST).includes(this.state.selectedBrand)) {
       return (
         <SubCategory

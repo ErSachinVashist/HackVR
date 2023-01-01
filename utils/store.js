@@ -6,6 +6,8 @@ const defaultState = {
   showList: false,
   selectedDevice: "",
   buyed: false,
+  showCart: false,
+  cart: [],
 };
 let State = { ...defaultState };
 
@@ -48,6 +50,50 @@ export function onDeviceBuyed() {
   updateComponent();
 }
 
+export function addToCart(item) {
+  State.cart.push(item);
+  updateComponent();
+}
+
+export function removeFromCart(itemId) {
+  const updatedCart = State.cart.filter((item) => item.id !== itemId);
+  State.cart = updatedCart;
+  updateComponent();
+}
+
+export function isAddedToCart(itemId) {
+  const filteredCart = State.cart.filter((device) => device.id === itemId);
+  return filteredCart.length > 0;
+}
+
+export function emptyCart() {
+  console.log("=empty cart");
+  State.cart = [];
+  updateComponent();
+}
+
+export function isItemsInCart() {
+  return State.cart.length > 0;
+}
+
+export function showCart() {
+  State.showCart = true;
+  updateComponent();
+}
+
+export function hideCart() {
+  State.showCart = false;
+  updateComponent();
+}
+
+export function shouldShowDeviceDetails() {
+  return State.selectedDevice && !State.showCart;
+}
+
+export function shouldShowDeviceList() {
+  return State.isOpened && !State.showCart;
+}
+
 export function connect(Component) {
   return class Wrapper extends React.Component {
     state = {
@@ -57,6 +103,8 @@ export function connect(Component) {
       showList: State.showList,
       selectedDevice: State.selectedDevice,
       buyed: State.buyed,
+      cart: State.cart,
+      showCart: State.showCart,
     };
     componentDidMount() {
       callbacks.push(() =>
@@ -66,6 +114,8 @@ export function connect(Component) {
           showList: State.showList,
           selectedDevice: State.selectedDevice,
           buyed: State.buyed,
+          cart: State.cart,
+          showCart: State.showCart,
         })
       );
     }
