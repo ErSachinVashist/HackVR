@@ -1,0 +1,11 @@
+Model Information:
+* title:	A1 Smart Phone
+* source:	https://sketchfab.com/3d-models/a1-smart-phone-37cb784c65be42f69fbb5fd666e18327
+* author:	ATK-G (https://sketchfab.com/ATK-G)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "A1 Smart Phone" (https://sketchfab.com/3d-models/a1-smart-phone-37cb784c65be42f69fbb5fd666e18327) by ATK-G (https://sketchfab.com/ATK-G) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
