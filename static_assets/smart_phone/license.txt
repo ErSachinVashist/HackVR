@@ -1,0 +1,11 @@
+Model Information:
+* title:	Minimal Smart Phone
+* source:	https://sketchfab.com/3d-models/minimal-smart-phone-b71ba4c82aea4a949ade4c347340037b
+* author:	BadduCoder (https://sketchfab.com/BadduCoder)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Minimal Smart Phone" (https://sketchfab.com/3d-models/minimal-smart-phone-b71ba4c82aea4a949ade4c347340037b) by BadduCoder (https://sketchfab.com/BadduCoder) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

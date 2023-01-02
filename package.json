@@ -1,9 +1,10 @@
 {
   "name": "reactvr",
   "version": "0.0.1",
-  "homepage": "https://ersachinvashist.github.io/HackVR/",
-  "private": true,
+  "homepage": "https://vish05.github.io/Webpolyfill/",
   "scripts": {
+    "predeploy": "npm run bundle",
+    "deploy": "gh-pages -d build",
     "start": "node node_modules/react-360/scripts/packager.js",
     "bundle": "node node_modules/react-360/scripts/bundle.js && sh scripts/copy-assets.sh",
     "open": "node -e \"require('xopen')('http://localhost:8081/index.html')\"",
@@ -14,16 +15,21 @@
     "react": "16.3.2",
     "react-360": "~1.1.0",
     "react-360-gaze-button": "^1.0.0",
+    "react-360-product-viewer": "^0.1.0",
     "react-360-web": "~1.1.0",
     "react-native": "~0.55.4",
+    "react-native-image-slider-box": "^2.0.7",
     "simple-raycaster": "^1.1.0",
-    "three": "^0.87.0"
+    "three": "^0.87.0",
+    "webvr-polyfill": "^0.10.12"
   },
   "devDependencies": {
     "babel-jest": "^19.0.0",
     "babel-preset-react-native": "^1.9.1",
     "gh-pages": "^4.0.0",
     "jest": "^19.0.2",
+    "metro-babel7-plugin-react-transform": "^0.54.1",
+    "metro-react-native-babel-preset": "^0.73.6",
     "react-devtools": "^2.5.2",
     "react-test-renderer": "16.0.0",
     "xopen": "1.0.0"

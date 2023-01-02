@@ -1,5 +1,17 @@
 import { StyleSheet } from "react-360";
 
+const cartButtonStyles = {
+  padding: 20,
+  borderColor: "#639dda",
+  borderWidth: 2,
+  width: "auto",
+  fontWeight: "700",
+  height: 50,
+  fontSize: 30,
+  textAlign: "center",
+  borderRadius: 30,
+};
+
 export const styles = StyleSheet.create({
   openBtn_mainView: {
     width: 1000,
@@ -23,6 +35,7 @@ export const styles = StyleSheet.create({
     width: 500,
     height: "auto",
     alignItems: "center",
+    alignContent: "center",
     justifyContent: "center",
     backgroundColor: "rgba(255, 179, 179,0.1)",
   },
@@ -163,8 +176,14 @@ export const styles = StyleSheet.create({
     backgroundColor: "white",
   },
 
-  buttonMob: {
-    //padding: 20,
+  categoryImageView: {
+    width: 500,
+
+    height: 400,
+  },
+
+  buyBtn: {
+    padding: 20,
 
     backgroundColor: "red",
 
@@ -183,6 +202,17 @@ export const styles = StyleSheet.create({
 
     borderRadius: 30,
   },
+
+  buttonMob: {
+    ...cartButtonStyles,
+    backgroundColor: "brown",
+  },
+
+  buttonMobDisabled: {
+    ...cartButtonStyles,
+    backgroundColor: "grey",
+  },
+
   priceDesign: {
     marginTop: 50,
 
@@ -193,12 +223,16 @@ export const styles = StyleSheet.create({
     fontSize: 30,
   },
 
+  imgbackground: {
+    backgroundColor: "red",
+  },
+
   subView: {
     width: 400,
     display: "flex",
     flexWrap: "wrap",
     flexDirection: "column",
-    margin: 15,
+    margin: 10,
     justifyContent: "space-around",
   },
   imageStyle: {
@@ -211,6 +245,14 @@ export const styles = StyleSheet.create({
     alignItems: "flex-start",
 
     //justifyContent: "center",
+  },
+  goToCartLink: {
+    color: "blue",
+    textDecorationLine: "underline",
+    textDecorationColor: "blue",
+    fontWeight: "bold",
+    marginLeft: 15,
+    margin: 5,
   },
 
   desText: {
@@ -233,9 +275,88 @@ export const styles = StyleSheet.create({
     fontSize: 20,
     color: "red",
     fontWeight: "bold",
+    justifyContent: "center",
   },
   buyView: {
     width: "auto",
     height: 50,
+  },
+
+  buy_cart_btn_view: {
+    display: "flex",
+    flexDirection: "row",
+  },
+
+  imageContainer: {
+    flex: 1,
+    height: 100,
+    borderWidth: 2,
+    justifyContent: "center",
+    backgroundColor: "#ecf0f1",
+    padding: 8,
+    alignItems: "center",
+  },
+  checkoutView: {
+    width: "auto",
+    height: "auto",
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-evenly",
+    backgroundColor: "white",
+    margin: 10,
+  },
+  checkoutItems: {
+    width: "auto",
+    height: "auto",
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-evenly",
+    margin: 10,
+  },
+  checkoutItemImage: {
+    width: 100,
+    height: 100,
+  },
+  checkoutItemText: {
+    color: "black",
+    margin: 5,
+  },
+  checkoutItemPrice: {
+    color: "red",
+    margin: 5,
+  },
+  flexColumn: {
+    display: "flex",
+    flexDirection: "column",
+  },
+  checkoutCart: {
+    width: "auto",
+    height: "auto",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-evenly",
+    marginRight: 10,
+    marginTop: 10,
+  },
+  cartBuyBtn: {
+    backgroundColor: "red",
+    borderColor: "#639dda",
+    borderWidth: 2,
+    width: "auto",
+    fontWeight: "700",
+    fontSize: 30,
+    textAlign: "center",
+    borderRadius: 30,
+  },
+  cartBackBtn: {
+    backgroundColor: "blue",
+    borderColor: "#639dda",
+    borderWidth: 2,
+    width: "auto",
+    fontWeight: "700",
+    fontSize: 30,
+    textAlign: "center",
+    borderRadius: 30,
+    margin: 5,
   },
 });
