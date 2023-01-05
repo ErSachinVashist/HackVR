@@ -92,7 +92,7 @@ export const styles = StyleSheet.create({
     height: "80%",
     flexDirection: "row",
     flexWrap: "wrap",
-    justifyContent: "space-between",
+    justifyContent: "center",
     alignItems: "center",
     backgroundColor: "white",
   },
@@ -147,14 +147,6 @@ export const styles = StyleSheet.create({
     fontWeight: "500",
     justifyContent: "center",
     marginLeft: 40,
-  },
-  zoomOnHover: {
-    borderColor: "blue",
-    borderWidth: 10,
-    width: "100%",
-    height: "100%",
-    flexDirection: "row",
-    justifyContent: "space-between",
   },
   categoryMobView: {
     width: 810,

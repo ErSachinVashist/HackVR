@@ -6,7 +6,7 @@ export default CONSTANTS = {
   IMAGES: {
     ENTRANCE_BG: "vodabg.png",
     STORE_BG: "store2.png",
-    CHECKOUT_BG: "checkout.jpeg",
+    CHECKOUT_BG: "checkout.png",
   },
   PRODUCT_HEADINGS: {
     Phones: "MOBILES - Hover on Brand to View Devices",
