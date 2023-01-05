@@ -1,12 +1,10 @@
 import React from "react";
 import { asset, Image, Text, View } from "react-360";
-import { connect, showProductList } from "../utils/store";
 import { styles } from "../styleSheet";
 import GazeButton from "react-360-gaze-button";
 import CONSTANTS from "../utils/CONSTANTS";
 
 const { GAZING_DELAY } = CONSTANTS;
-let hovered = false;
 export default class SubCategory extends React.Component {
   render() {
     return (
@@ -17,15 +15,13 @@ export default class SubCategory extends React.Component {
         <View style={styles.categoryList}>
           {this.props.itemList.map((item, index) => (
             <View
-              style={hovered ? styles.zoomOnHover : styles.categoryItem}
+              style={styles.categoryItem}
               key={item.id || index}
             >
               <GazeButton
                 duration={GAZING_DELAY}
                 onClick={this.props.handleOnClick(item)}
-                render={(remainingTime, isGazed) => {
-                  if (isGazed) hovered = true;
-                  else hovered = false;
+                render={() => {
                   return (
                     <View>
                       {item.img && (
